@@ -1,0 +1,158 @@
+:root {
+  --primary-color: #007BFF; /* Blue */
+  --secondary-color: #FF4136; /* Red */
+  --background-color: #ffffff; /* White */
+  --text-color: #333;
+  --header-font: 'Roboto', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+  --highlight-color: #FF4136; /* Red */
+
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--header-font);
+  color: var(--primary-color);
+  margin: 0.5em 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p {
+  line-height: 1.6;
+  margin: 1em 0;
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--highlight-color);
+}
+
+button {
+  font-family: var(--body-font);
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+button:hover {
+  border-color: var(--highlight-color);
+  background-color: var(--secondary-color);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1em 0;
+  text-align: center;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  transition: background-color 0.3s;
+}
+
+.nav a:hover {
+  background-color: var(--highlight-color);
+}
+
+.container {
+  padding: 2em;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #242424;
+    --text-color: rgba(255, 255, 255, 0.87);
+  }
+
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+
+  .container {
+    background-color: #333;
+  }
+}
